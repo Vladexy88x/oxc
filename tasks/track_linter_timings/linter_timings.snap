@@ -419,7 +419,6 @@ react/exhaustive-effect-dependencies                       |      7
 react/forbid-component-props                               |    452
 react/forward-ref-uses-ref                                 |  62606
 react/function-component-definition                        |  16812
-react/gating                                               |      7
 react/globals                                              |      7
 react/hook-use-state                                       |  62606
 react/hooks                                                |      7
@@ -589,6 +588,7 @@ unicorn/no-invalid-remove-event-listener                   |  62606
 unicorn/no-length-as-slice-end                             |  62606
 unicorn/no-lonely-if                                       |  13190
 unicorn/no-magic-array-flat-depth                          |  62606
+unicorn/no-negated-comparison                              |   9106
 unicorn/no-negated-condition                               |  17912
 unicorn/no-negation-in-equality-check                      |  20604
 unicorn/no-nested-ternary                                  |   4722

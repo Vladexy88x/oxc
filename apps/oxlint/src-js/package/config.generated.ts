@@ -1343,7 +1343,6 @@ export interface DummyRuleMap {
   "react/forbid-elements"?: RuleNoConfig | [AllowWarnDeny, ForbidElementsConfig];
   "react/forward-ref-uses-ref"?: RuleNoConfig;
   "react/function-component-definition"?: RuleNoConfig | [AllowWarnDeny, FunctionComponentDefinitionConfig];
-  "react/gating"?: RuleNoConfig;
   "react/globals"?: RuleNoConfig;
   "react/hook-use-state"?: RuleNoConfig | [AllowWarnDeny, HookUseStateConfig];
   "react/hooks"?: RuleNoConfig;
@@ -1587,6 +1586,7 @@ export interface DummyRuleMap {
   "unicorn/no-length-as-slice-end"?: RuleNoConfig;
   "unicorn/no-lonely-if"?: RuleNoConfig;
   "unicorn/no-magic-array-flat-depth"?: RuleNoConfig;
+  "unicorn/no-negated-comparison"?: RuleNoConfig | [AllowWarnDeny, NoNegatedComparison];
   "unicorn/no-negated-condition"?: RuleNoConfig;
   "unicorn/no-negation-in-equality-check"?: RuleNoConfig;
   "unicorn/no-nested-ternary"?: RuleNoConfig;
@@ -6460,6 +6460,12 @@ export interface NoInstanceofBuiltinsConfig {
    * to be available.
    */
   useErrorIsError?: boolean;
+}
+export interface NoNegatedComparison {
+  /**
+   * Also check logical (`&&`/`||`) expressions that only contain equality comparisons.
+   */
+  checkLogicalExpressions?: boolean;
 }
 export interface NoNull {
   /**

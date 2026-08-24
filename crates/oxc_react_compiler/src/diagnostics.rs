@@ -1058,16 +1058,6 @@ where
 }
 
 #[cold]
-pub fn todo_build_hir_lower_statement_handle_empty_test_statement<L, T>(labels: T) -> OxcDiagnostic
-where
-    L: Into<oxc_diagnostics::LabeledSpan>,
-    T: IntoIterator<Item = L>,
-{
-    diagnostic(ErrorCategory::Todo, "(BuildHIR::lowerStatement) Handle empty test in ForStatement")
-        .with_labels(labels)
-}
-
-#[cold]
 pub fn todo_build_hir_lower_statement_handle_await_loops<L, T>(labels: T) -> OxcDiagnostic
 where
     L: Into<oxc_diagnostics::LabeledSpan>,
@@ -2027,15 +2017,6 @@ pub fn missing_function_declaration_binding(name: &str, span: Span) -> OxcDiagno
         format!("Could not find binding for function declaration `{name}`"),
     )
     .with_label(span.primary_label(format!("No binding was found for `{name}`")))
-}
-
-#[cold]
-pub fn jsx_attribute_colon(name: &str, span: Span) -> OxcDiagnostic {
-    diagnostic(
-        ErrorCategory::Todo,
-        format!("(BuildHIR::lowerExpression) Unexpected colon in attribute name `{name}`"),
-    )
-    .with_label(span.primary_label(format!("`{name}` contains an unsupported colon")))
 }
 
 #[cold]
